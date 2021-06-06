@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU ClubFinder</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <div class = "header-left">
+        <a href = "main.html">AU ClubFinder.</a>
+      </div>
+      <div class="container">
+        
+        <div class="header-right">
+          <a href = "https://www.linkedin.com/in/roshni-balasubramanian-bb5701189/">Contact Us</a>
+          <a href = "#learn">Learn More</a>
+          <a href = "#try">Try It Out</a>
+        </div>
+
+      </div>
+    </header>
+
+    
+    <div class="top-wrapper">
+      <div class="container">
+          <h1>-AU CLUB FINDER-</h1>
+          <h3>Find the extra-curricular club that's meant for you!</h3>
+          <p>Started in 2021, this site aims to find you the perfect club as per your interests.</p>
+          <p>Just pop in your interests, we'll take care of the rest.</p>
+      </div>
+    </div>
+    
+        <div class = "user-details" id="try">
+          <div class = "container">
+            <div class = "heading">
+              <h2>What are your interests?</h2>
+              <p style = "color:darkred"> CHOOSE ALL THAT APPLIES TO YOU AND CLICK SUBMIT!</p>
+            </div>
+            
+              <p>Interests I (Technical):</p>
+              <input type="checkbox" id="t1" name="t1" value="Coding">
+              <label for="t1">Coding</label><br>
+              <input type="checkbox" id="t2" name="t2" value="Robotics">
+              <label for="t2">Robotics and Programming</label><br>
+              <input type="checkbox" id="t3" name="t3" value="Quiz">
+              <label for="t3">Quiz and General Knowledge</label><br>
+              <input type="checkbox" id="t4" name="t4" value="Quiz">
+              <label for="t4">Computer Science</label><br>
+              <br>
+              <button onclick = "getValueTech()">Show Me Technical Clubs</button> <br>
+              <p style = "background-color: rgba(0, 74, 104, 0.9) ; color:white" id = "resulttech"> </p>
+  
+              <script>
+                function getValueTech(){
+                
+                  var tres = " ";
+                  if(t1.checked == true){
+                    tres += "<br>" +" >  CTF " ;
+                  
+                  }
+                  if(t2.checked == true){
+                    tres +=  "<br>" +" > Robotics" + " " + "Club ";
+                  }
+                  if(t3.checked == true){
+                    tres += "<br>" +" > Quizzers" + " " + "Anonymous";
+                  }
+                  if(t4.checked == true){
+                    tres += "<br>" +" > CSEA ";
+                  }
+                  if(t1.checked == false && t2.checked == false && t3.checked == false && t4.checked == false){
+                    return document.getElementById("resulttech").innerHTML = "Nothing has been selected!";
+  
+                  }
+                  return document.getElementById("resulttech").innerHTML = " Based on your interests you can apply for : " + tres;
+                  
+                  }
+              
+              </script>
+
+
+              <p>Interest List II (Community Welfare):</p>
+              <input type="checkbox" id="c1" name="c1" value="Environment">
+              <label for="sc1">Environment</label><br>
+              <input type="checkbox" id="c2" name="c2" value="Women">
+              <label for="sc2">Women Empowerment</label><br>
+              <input type="checkbox" id="c3" name="c3" value="Student">
+              <label for="sc3">Student Help</label><br>
+              <input type="checkbox" id="c4" name="c4" value="Social">
+              <label for="sc4">Social Service</label><br>
+              <br>
+
+              <button onclick = "getValueCom()">Show Me Welfare Organisations</button> <br>
+            <p style ="background-color: rgba(0, 74, 104, 0.9) ; color:white" id = "resultcom"> </p>
+
+            <script>
+              function getValueCom(){
+              
+                var comres = " ";
+                if(c1.checked == true){
+                  comres += "<br>" + " > Green" + " " + "Brigade ";
+                }
+                
+                if(c2.checked == true){
+                  comres += "<br>" +" > Aakriti" + " " + "Girls" + " " + "Forum ";
+                }
+                if(c3.checked == true){
+                  comres += "<br>" +"> Siruthuligal";
+                }
+                if(c4.checked == true){
+                  comres += "<br>" +" > NSS ";
+                }
+                if(c1.checked == false && c2.checked == false && c3.checked == false && c4.checked == false){
+                  return document.getElementById("resultcom").innerHTML = "Nothing has been selected!";
+
+                }
+                return document.getElementById("resultcom").innerHTML = " Based on your interests you can apply for : " + comres ;
+                 
+                }
+              
+            </script>
+
+              <p>Interest List III (Business):</p>
+              <input type="checkbox" id="b1" name="b1" value="Entrepreneurship">
+              <label for="b1">Entrepreneurship</label><br>
+              <input type="checkbox" id="b2" name="b2" value="Leadership">
+              <label for="b2">Leadership and Management</label><br>
+              <input type="checkbox" id="b3" name="b3" value="Public">
+              <label for="b3">Public Speaking</label><br>
+              <input type="checkbox" id="b4" name="b4" value="Professionalism">
+              <label for="b4">Professionalism</label><br>
+              <br>
+              <button onclick = "getValueBus()">Show Me Business Clubs</button> <br>
+            <p style = "background-color: rgba(0, 74, 104, 0.9) ; color:white" id = "resultbus"> </p>
+
+            <script>
+              function getValueBus(){
+              
+                var busres = " ";
+                if(b1.checked == true){
+                  busres += "<br>" +" > Capitalise ";
+                }
+                
+                if(b2.checked == true){
+                  busres += "<br>" +"> Leo" + " " + "Club ";
+                }
+                if(b3.checked == true){
+                  busres += "<br>" +" > Literary" + " " + "Club ";
+                }
+                if(b4.checked == true){
+                  busres += "<br>" +" > SAAS ";
+                }
+                if(b1.checked == false && b2.checked == false && b3.checked == false && b4.checked == false){
+                  return document.getElementById("resultbus").innerHTML = "Nothing has been selected!";
+
+                }
+                return document.getElementById("resultbus").innerHTML = " Based on your interests you can apply for : " + busres;
+                
+                  
+                }
+              
+            </script>
+              <p>Interest List IV (Arts):</p>
+              <input type="checkbox" id="a1" class="a" value="Music">
+              <label for="a1">Music</label><br>
+              <input type="checkbox" id="a2" class="a" value="Theatre">
+              <label for="a2">Theatre</label><br>
+              <input type="checkbox" id="a3" class="a" value="Writing">
+              <label for="a3">Writing</label><br>
+              <input type="checkbox" id="a4" class="a" value="Speaking">
+              <label for="a4">Speaking</label><br>
+              <br>
+            <button onclick = "getValueArt()">Show Me Arts Clubs</button> <br>
+            <p style ="background-color: rgba(0, 74, 104, 0.9) ; color:white" id = "resultart"> </p>
+
+            <script>
+              function getValueArt(){
+              
+                var artres = " ";
+                if(a1.checked == true){
+                  artres += "<br>" +"> Shrutilaya ";
+                }
+                if(a2.checked == true){
+                  artres +="<br>" + "> Theatron";
+                }
+                if(a3.checked == true){
+                  artres += "<br>" +"> Guindy" + " " + "Times";
+                }
+                if(a4.checked == true){
+                  artres += "<br>" +"> Literary" + " " + "Club";
+                }
+                if(a1.checked == false && a2.checked == false && a3.checked == false && a4.checked == false){
+                  return document.getElementById("resultart").innerHTML = "Nothing has been selected!";
+
+                }
+                return document.getElementById("resultart").innerHTML = " Based on your interests you can apply for : " + artres;
+                }
+  
+            </script>
+          </div>
+        </div>
+
+
+        <div class = "user-details">
+          <div class = "container">
+            <div class="heading">
+            <h2>Tell us more about you!</h2>
+            </div>
+            <form>
+              <p> First Name: </p>
+              <input type = "text" size = 54 name = "firstName" required>
+              <p> Last Name: </p>
+              <input type = "text" size = 54 name = "lastName" required>
+              <p> Year: </p>
+              <input type = "radio" id ="First" name = "year" value = "First" required>
+              <label for = "First">First</label><br>
+              <input type = "radio" id ="Second" name = "year" value = "Second">
+              <label for = "Second">Second</label><br>
+              <input type = "radio" id ="Third" name = "year" value = "Third">
+              <label for = "Third">Third</label><br>
+              <input type = "radio" id ="Fourth" name = "year" value = "Fourth">
+              <label for = "Fourth">Fourth</label><br>
+              <input type = "radio" id ="Other" name = "year" value = "Other">
+              <label for = "Other">Other</label><br>
+              <p>Department:</p>
+              <select id = "dept" name = "dept" required>
+                <option value = "none">Choose Department</option>
+                <option value = "cse">CSE</option>
+                <option value = "ist">IT</option>
+                <option value = "eee">EEE</option>
+                <option value = "ece">ECE</option>
+                <option value = "mech">Mechanical</option>
+                <option value = "ind">Industrial</option>
+                <option value = "man">Manufacturing</option>
+                <option value = "other">Other Dept</option>
+              </select>
+              <p>Email Address:<span style = "color:dimgray">   (example@example.com)</span></p>
+              <input type = "text" size = 54 name = "emailID" required>
+              <p>Tell us about yourself (Optional):</p>
+              <textarea cols = 50 rows = 5></textarea><br><br>
+              <input type = "checkbox" id = "notif" required>
+              <label for ="notif"><span style = "font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:brown"> Would you like to be notified when new updates are made?</span></label>
+              <div class = "heading">
+              <p> ON SUBMITTING THIS, YOUR INFORMATION WILL BE STORED.  THIS CANNOT BE UNDONE.</p></div>
+              <input class = "but1" type = "submit" value = "   I agree">
+            </form>
+          
+          </div>
+        </div>
+
+        <div class = "user-details" id = "learn">
+          <div class = "container">
+            <div class = "heading">
+              <h2>To learn more about these clubs: </h2>
+              <form action = " https://ceg.annauniv.edu/clubs.html">
+                <button class = "but1">  Go to Site</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+    <footer>
+      <div class="container">
+        <p style = "text-align: right;">Made by Roshni Balasubramanian | June 2021</p>
+      </div>
+    </footer>
+  </body>
+</html>
